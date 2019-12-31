@@ -1,18 +1,10 @@
 {
-  "name": "react-scripts",
-  "version": "3.3.0",
-  "description": "Configuration and scripts for Create React App.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/facebook/create-react-app.git",
-    "directory": "packages/react-scripts"
-  },
+  "name": "earthling-interactive-react-scripts",
+  "version": "0.0.2",
+  "description": "Configuration and scripts for Create React App customized for Earthling Interactive.",
   "license": "MIT",
   "engines": {
     "node": ">=8.10"
-  },
-  "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
   },
   "files": [
     "bin",
@@ -29,6 +21,7 @@
   "types": "./lib/react-app.d.ts",
   "dependencies": {
     "@babel/core": "7.7.5",
+    "@babel/plugin-proposal-decorators": "7.7.4",
     "@svgr/webpack": "4.3.3",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
