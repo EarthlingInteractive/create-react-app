@@ -10,6 +10,12 @@
 const babelJest = require('babel-jest');
 
 module.exports = babelJest.createTransformer({
+  // Earthling Interactive Modification - START
+  plugins: [
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    ['@babel/plugin-proposal-class-properties', { loose: true }],
+  ],
+  // Earthling Interactive Modification - END
   presets: [require.resolve('babel-preset-react-app')],
   babelrc: false,
   configFile: false,

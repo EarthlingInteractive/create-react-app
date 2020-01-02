@@ -270,8 +270,8 @@ module.exports = function(webpackEnv) {
               : false,
           },
           cssProcessorPluginOptions: {
-              preset: ['default', { minifyFontValues: { removeQuotes: false } }]
-          }
+            preset: ['default', { minifyFontValues: { removeQuotes: false } }],
+          },
         }),
       ],
       // Automatically split vendor and commons
@@ -375,7 +375,9 @@ module.exports = function(webpackEnv) {
                     };
                   }
                 })(),
-                useEslintrc: false,
+                // Earthling Interactive Modification - START
+                useEslintrc: true,
+                // Earthling Interactive Modification - END
                 // @remove-on-eject-end
               },
               loader: require.resolve('eslint-loader'),
@@ -431,6 +433,10 @@ module.exports = function(webpackEnv) {
                 ),
                 // @remove-on-eject-end
                 plugins: [
+                  // Earthling Interactive Modification - START
+                  ['@babel/plugin-proposal-decorators', { legacy: true }],
+                  ['@babel/plugin-proposal-class-properties', { loose: true }],
+                  // Earthling Interactive Modification - END
                   [
                     require.resolve('babel-plugin-named-asset-import'),
                     {
